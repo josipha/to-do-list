@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Daily Task Manager</h1>
+        <p class="subtitle">Plan your day and achieve your goals!</p>
+
+        <div class="input-section">
+            <input type="text" id="taskInput"
+                   placeholder="What needs to be done?">
+            <button onclick="addTask()">+ Create Task</button>
+        </div>
+
+        <input type="text" id="searchInput"
+               placeholder="Search your task..."
+               oninput="displayTasks()">
+
+        <div class="filters">
+            <button onclick="setFilter('all')">All Tasks</button>
+            <button onclick="setFilter('pending')">To Do</button>
+            <button onclick="setFilter('completed')">Finished</button>
+        </div>
+
+        <h3 class="list-heading">My Tasks</h3>
+
+        <ul id="taskList"></ul>
+
+        <div class="task-info">
+            <p>Total Tasks: <span id="total">0</span></p>
+            <p>Remaining: <span id="remaining">0</span></p>
+            <p>Finished: <span id="finished">0</span></p>
+        </div>
+
+        <button class="clear-btn" onclick="clearCompleted()">
+            Clear Finished Tasks
+        </button>
+
+        <footer>
+            <p>Designed by: Friend's Name</p>
+            <p>Register Number: 212224220044</p>
+            <p>© 2026 Daily Task Manager</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
